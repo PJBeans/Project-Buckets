@@ -1,0 +1,4 @@
+#Tue Jul 10 22:34:26 EDT 2018
+base.0=C\:\\Users\\phill\\Documents\\UnityProjects\\Project-Buckets\\Temp\\gradleOut\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\phill\\Documents\\UnityProjects\\Project-Buckets\\Temp\\gradleOut\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex
