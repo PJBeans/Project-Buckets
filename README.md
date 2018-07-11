@@ -1,6 +1,7 @@
 # Project-Buckets
 Golf-like Puzzle-ish game. Build this game in Unity.
 
+Obviously, this project is nowhere near complete. Nothing is final. Especially those graphics - those are just default Unity geometric sprites!
 ## Focus list:
 - The game will look fine on both 16:9 devices and narrower 18:9 and 19:9 devices. 16:10 devices are less common, but the game will still be playable on these devices as well.
 > Basically, the playable area will consist in a 16:9 space, but on larger displays, the area will appear to extend.
