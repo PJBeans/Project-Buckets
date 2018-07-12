@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class main : MonoBehaviour {
 	public Rigidbody2D rb;
 	public float zapFloat = 50;
 	public static int shots { get;	set; }
+	public Text deadText;
 
 
 	// Use this for initialization
 	void Start () {
+		deadText.text = "";
 		Debug.Log ("Main: shots: " + shots);
 	}
 	
@@ -26,15 +29,24 @@ public class main : MonoBehaviour {
 }
 
 	void OnCollisionEnter2D (Collision2D col) {
-		Vector2 zapForce = transform.TransformDirection (Vector2.down);
+		// bucket is the end goal.
 		if (col.gameObject.tag == "bucket") {
 			Debug.Log ("bucket");
 
 		}
+
+		// zap sends the ball down.
 		if (col.gameObject.tag == "zap") {
 			Debug.Log ("zap");
-			transform. position = new Vector2 (0, -2);
+			rb.AddForce (new Vector2 (0, -120000 * Time.deltaTime));
 
 	}
+		if (col.gameObject.tag == "floor") {
+			Debug.Log ("floor");
+			if (shots == 0) {
+				deadText.text = "Game Over!";
+			}
+
+}
 }
 }

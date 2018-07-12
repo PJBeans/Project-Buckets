@@ -7,14 +7,14 @@ public class setPower : MonoBehaviour {
 	public Rigidbody2D rb;
 	public TextMesh powerLevelText;
 	public int powerBarPosition;
-	// Only set in left bar!
+
 	public int remainingShots;
 	public Vector2 powerLaunch;
 
 
 	//0 is left, 1 is right
+	// Originally was two different scripts for both Power Bars. Merged for simplicity.
 
-	// Use this for initialization
 	void Start () {
 		main.shots = shotInt.remainingShots;
 
@@ -31,7 +31,9 @@ public class setPower : MonoBehaviour {
 			if (powerLevel >= 200) {
 				powerLevel = 200;
 			}
-			powerLevelText.text = powerLevel.ToString ();
+				if (main.shots > 0) {
+					powerLevelText.text = powerLevel.ToString ();
+				}
 			// Debug.Log (powerLevel);
 
 		}
@@ -46,6 +48,7 @@ public class setPower : MonoBehaviour {
 				if (powerLevel >= 200) {
 					powerLevel = 200;
 				}
+				if (main.shots > 0)
 				powerLevelText.text = powerLevel.ToString ();
 				//Debug.Log (powerLevel);
 
